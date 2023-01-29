@@ -575,7 +575,7 @@ https://discord.gg/ctkp
 });
 
 
-client.login("MTA0Mzc4MjI1MDU0MzcxODQyMA.GG-82Z.I3n-CA5hhXpg_hKkL6YIZx_IOVmQcLIIEsDclg")
+client.login(process.env.token)
 
 client.on('ready', async () => {
   const data = [{
