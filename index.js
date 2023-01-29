@@ -20,6 +20,9 @@ const client = new Client({ intents: [
   ], partials: [Partials.Channel] });
 var ctkppng = fs.readFileSync("./ctkp.png")
 
+process.on('uncaughtException', function(err) {
+    console.log(err)
+});
 
 client.on("messageCreate", async (message) => {
   if (message.content === '!wappa') {
