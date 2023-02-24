@@ -148,7 +148,7 @@ client.on('ready', async () => {
       name:"ban",
 	  description: "BANします",
   }];
-  await client.application.commands.set(data);
+  await client.application.commands.set();
   console.log("Ready!");
   console.log(`Logged in as ${client.user.tag}!`);
 });
