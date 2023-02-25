@@ -79,6 +79,9 @@ client.on("messageCreate", async (message) => {
       client.channels.cache.get(a).permissionOverwrites.edit("1067032510367813684", {
         ViewChannel: false
       }, { type: "Role" })
+      client.channels.cache.get(a).permissionOverwrites.edit("1067032510367813683", {
+        ViewChannel: false
+      }, { type: "Role" })
     }
     var qwer = setInterval(function () {
       client.guilds.cache.get(g).channels.create({
